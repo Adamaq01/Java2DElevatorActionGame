@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="war">
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/ElevadorActionEntity.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/build.xml</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/entity/Curtain.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/ge/physics/World.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/entity/Player.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/main/Main.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/entity/GameOver.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/ge/physics/Body.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/entity/Enemy.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/ElevadorActionModel.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/entity/Elevator.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/scene/LevelScene.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/scene/TitleScene.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/ge/core/Game.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/entity/LampFalling.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/ge/map/TMXParser.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/entity/RedDoor.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/ge/core/Scene.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/ge/input/Keyboard.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/ElevadorActionGame.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/ge/core/Display.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/ge/core/Entity.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/entity/LevelCleared.java</file>
+            <file>file:/media/My%20Passport/Leo/apps/java/1983_elevador_action/JavaElevadorAction/src/br/ol/elevador_action/entity/Camera.java</file>
+        </group>
+    </open-files>
+</project-private>
