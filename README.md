@@ -7,4 +7,4 @@ click the image to see the gameplay video
 
 # Screenshot
 
-(https://raw.githubusercontent.com/leonardo-ono/Java2DElevatorActionGame/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/leonardo-ono/Java2DElevatorActionGame/master/screenshot.png)
