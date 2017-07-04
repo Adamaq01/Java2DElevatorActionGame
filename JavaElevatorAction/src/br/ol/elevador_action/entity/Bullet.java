@@ -115,7 +115,7 @@ public class Bullet extends ElevadorActionEntity {
                     getModel().setLampHit(true);
                     // replace lamp tile with empty tile
                     getTmxParser().layers.get(0).set(c, r, 21);
-                    Set<Area> areas = scene.getTilemap().getTilesSpatialPartition().retrieve(b);
+                    Set<Area> areas = scene.getTilemap().getTilesSpatialPartition()[0].retrieve(b);
                     for (Area area : areas) {
                         if (area.getOwner() instanceof Long) {
                             area.setOwner(21L);

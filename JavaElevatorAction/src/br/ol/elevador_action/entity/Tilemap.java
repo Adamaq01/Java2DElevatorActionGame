@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 public class Tilemap extends ElevadorActionEntity {
     
     private Camera camera;
-    private GridSpatialPartition tilesSpatialPartition;
+    private GridSpatialPartition[] tilesSpatialPartitions = new GridSpatialPartition[2];
  
     private Map<Long, BufferedImage> tileImagesLightsOn = new HashMap<Long, BufferedImage>();
     private Map<Long, BufferedImage> tileImagesLightsOff = new HashMap<Long, BufferedImage>();
@@ -32,8 +32,8 @@ public class Tilemap extends ElevadorActionEntity {
         this.camera = camera;
     }
 
-    public GridSpatialPartition getTilesSpatialPartition() {
-        return tilesSpatialPartition;
+    public GridSpatialPartition[] getTilesSpatialPartition() {
+        return tilesSpatialPartitions;
     }
 
     public Map<Long, BufferedImage> getTileImages() {
@@ -46,7 +46,8 @@ public class Tilemap extends ElevadorActionEntity {
             setZorder(3);
             setVisible(true);
             Layer layer = getTmxParser().layers.get(0);
-            tilesSpatialPartition = new GridSpatialPartition(layer.width * 8, layer.height * 8, 8, 8);
+            tilesSpatialPartitions[0] = new GridSpatialPartition(layer.width * 8, layer.height * 8, 8, 8);
+            tilesSpatialPartitions[1] = new GridSpatialPartition(layer.width * 8, layer.height * 8, 8, 8);
             cacheAllTileImages();
             createAllTiles();
             System.gc();
@@ -83,6 +84,7 @@ public class Tilemap extends ElevadorActionEntity {
     }
     
     private void createAllTiles() {
+        int layerIndex = 0;
         for (Layer layer : getTmxParser().layers) {
             for (int y=0; y<layer.height; y++) {
                 for (int x=0; x<layer.width; x++) {
@@ -92,19 +94,22 @@ public class Tilemap extends ElevadorActionEntity {
                     }
                     Area<Long> area = new Area<Long>(x * 8, y * 8, 8, 8);
                     area.setOwner(gid);
-                    tilesSpatialPartition.update(area);                    
+                    tilesSpatialPartitions[layerIndex].update(area);                    
                 }                
             }
+            layerIndex++;
         }
     }
     
     @Override
     public void draw(Graphics2D g) {
-        Set<Area> retrievedAreas = tilesSpatialPartition.retrieve(camera.getArea());
-        for (Area<Long> ra : retrievedAreas) {
-            BufferedImage image = getTileImages().get(ra.getOwner());
-            g.drawImage(image, (int) ra.x, (int) ra.y, null);
-        }        
+        for (GridSpatialPartition tilesSpatialPartition : tilesSpatialPartitions) {
+            Set<Area> retrievedAreas = tilesSpatialPartition.retrieve(camera.getArea());
+            for (Area<Long> ra : retrievedAreas) {
+                BufferedImage image = getTileImages().get(ra.getOwner());
+                g.drawImage(image, (int) ra.x, (int) ra.y, null);
+            }        
+        }
     }
     
 }
