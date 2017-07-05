@@ -315,7 +315,7 @@ public class Elevator extends ElevadorActionEntity {
     public boolean canPlayerControl() {
         Player player = ((LevelScene) getScene()).getPlayer();
         for (Cabinet cabinet : cabinets) {
-            if (cabinet.inside.contains(player.getBody()) && player.isOnFloor() && !player.isDied()) {
+            if (cabinet.inside.contains(player.getBody()) && player.isOnFloor() && !player.isDead()) {
                 return true;
             }
         }
@@ -324,7 +324,7 @@ public class Elevator extends ElevadorActionEntity {
 
     public boolean isEnemyInside(Enemy enemy) {
         for (Cabinet cabinet : cabinets) {
-            if (cabinet.inside.contains(enemy.getBody()) && !enemy.isDied()) {
+            if (cabinet.inside.contains(enemy.getBody()) && !enemy.isDead()) {
                 return true;
             }
         }

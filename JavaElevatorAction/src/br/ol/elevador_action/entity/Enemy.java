@@ -207,7 +207,7 @@ public class Enemy extends ElevadorActionEntity {
     }
 
     private void checkOutOfCamera() {
-        if (isDied()) {
+        if (isDead()) {
             return;
         }
         if ((body.getY() > camera.getArea().getY() + camera.getArea().getHeight())
@@ -743,7 +743,7 @@ public class Enemy extends ElevadorActionEntity {
     }
 
     public void smash() {
-        if (isDied()) {
+        if (isDead()) {
             return;
         }
         getScene().changeEntityZOrder(this, 5);
@@ -755,7 +755,7 @@ public class Enemy extends ElevadorActionEntity {
     }
 
     public void die() {
-        if (isDied()) {
+        if (isDead()) {
             return;
         }
         getScene().changeEntityZOrder(this, 5);
@@ -765,7 +765,7 @@ public class Enemy extends ElevadorActionEntity {
         updateAnimation();
     }
     
-    public boolean isDied() {
+    public boolean isDead() {
         return state == STAND_BY || state == SMASH || state == DIE;
     }
 
@@ -909,7 +909,7 @@ public class Enemy extends ElevadorActionEntity {
     
     private void evaluatePossibleActions() {
         possibleActions.clear();
-        if (isDied()) {
+        if (isDead()) {
             return;
         }
         resizeSensor();

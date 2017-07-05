@@ -5,7 +5,6 @@ import br.ol.elevador_action.ElevadorActionScene;
 import static br.ol.elevador_action.entity.Player.PlayerState.*;
 import br.ol.elevador_action.scene.LevelScene;
 import br.ol.g2d.Animation;
-import br.ol.ge.input.Keyboard;
 import br.ol.ge.physics.Body;
 import java.awt.Graphics2D;
 import java.awt.Point;
@@ -13,6 +12,7 @@ import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import static java.awt.event.KeyEvent.*;
 import java.util.Set;
+
 /**
  * Player class.
  * 
@@ -136,7 +136,7 @@ public class Player extends ElevadorActionEntity {
     }
 
     private void checkLevelCleared() {
-        if (state == LEVEL_CLEARED || state == STAND_BY || state == NONE || isDied()) {
+        if (state == LEVEL_CLEARED || state == STAND_BY || state == NONE || isDead()) {
             return;
         }
         if (body.getY() + body.getHeight() >= getModel().getLastFloorY() + 50) {
@@ -679,7 +679,7 @@ public class Player extends ElevadorActionEntity {
     }
 
     public void smash() {
-        if (isDied()) {
+        if (isDead()) {
             return;
         }
         diedYPosition = (int) body.getY();
@@ -693,7 +693,7 @@ public class Player extends ElevadorActionEntity {
     }
 
     public void die(int dieYPosition) {
-        if (isDied()) {
+        if (isDead()) {
             return;
         }
         this.diedYPosition = dieYPosition;
@@ -705,7 +705,7 @@ public class Player extends ElevadorActionEntity {
         hud.died();
     }
     
-    public boolean isDied() {
+    public boolean isDead() {
         return state == SMASH || state == DIE;
     }
 
