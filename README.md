@@ -5,6 +5,11 @@
 https://github.com/leonardo-ono/Java2DElevatorActionGame/raw/master/JavaElevatorAction/store/Java2DElevatorAction.jar
 
 
+## Control
+
+use [z] key to shot and [x] key to jump.
+
+
 ## Screenshot
 
 ![screenshot](https://raw.githubusercontent.com/leonardo-ono/Java2DElevatorActionGame/master/screenshot.png)
