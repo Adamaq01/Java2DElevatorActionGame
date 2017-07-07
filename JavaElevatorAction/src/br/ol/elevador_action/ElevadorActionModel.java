@@ -205,6 +205,7 @@ public class ElevadorActionModel {
     private void createPhysicsWorld() {
         world = new World(tmxParser.width * tmxParser.tilewidth, tmxParser.height * tmxParser.tileheight, tmxParser.tilewidth, tmxParser.tileheight);
         Layer layer = tmxParser.layers.get(0);
+        boolean firstFloorPosition = true;
         for (int row=0; row<layer.height; row++) {
             for (int col=0; col<layer.width; col++) {
                 long gid = layer.get(col, row);
@@ -218,6 +219,10 @@ public class ElevadorActionModel {
                 }
                 // floor position
                 else if (gid == 37)  {
+                    if (firstFloorPosition) {
+                        firstFloorPosition = false;
+                        continue;
+                    }
                     int fy = row * 8;
                     lastFloorY = fy > lastFloorY ? fy : lastFloorY;
                     Body<String> floor_position = new Body(this, false, false, 0, col * 8, row * 8 + 2, 8, 8 - 2, 1, 6);

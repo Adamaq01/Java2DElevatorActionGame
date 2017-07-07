@@ -231,7 +231,7 @@ public class LevelScene extends ElevadorActionScene {
     public void draw(Graphics2D g) {
         g.translate(-camera.getArea().getX(), -camera.getArea().getY());
         super.draw(g);
-        // getModel().getWorld().drawDebug(g);
+        //getModel().getWorld().drawDebug(g);
         g.translate(camera.getArea().getX(), camera.getArea().getY());
         curtain.draw(g);
         gameOver.draw(g);
